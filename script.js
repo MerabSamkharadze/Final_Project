@@ -17,13 +17,20 @@ const getData = async (searchTerm) => {
 };
 
 getData();
-let timeOutId;
-const onInput = (event) => {
-  if (timeOutId) {
-    clearTimeout(timeOutId);
-  }
-  timeOutId = setTimeout(() => {
-    getData(event.target.value);
-  }, 1000);
+
+const debounce = (func) => {
+  let timeOutId;
+  return (...args) => {
+    if (timeOutId) {
+      clearTimeout(timeOutId);
+    }
+    timeOutId = setTimeout(() => {
+      func.apply(null, args);
+    }, 1000);
+  };
 };
-search_movie_input.addEventListener("input", onInput);
+
+const onInput = (event) => {
+  getData(event.target.value);
+};
+search_movie_input.addEventListener("input", debounce(onInput));
