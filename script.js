@@ -8,7 +8,8 @@ const getData = async (searchTerm) => {
         s: searchTerm,
       },
     });
-    console.log(response.data);
+
+    return response.data.Search;
   } catch (err) {
     const h1 = document.createElement("h1");
     h1.textContent = ` Server error : ${err}`;
@@ -18,19 +19,8 @@ const getData = async (searchTerm) => {
 
 getData();
 
-const debounce = (func) => {
-  let timeOutId;
-  return (...args) => {
-    if (timeOutId) {
-      clearTimeout(timeOutId);
-    }
-    timeOutId = setTimeout(() => {
-      func.apply(null, args);
-    }, 1000);
-  };
+const onInput = async (event) => {
+  const movies = await getData(event.target.value);
+  console.log(movies);
 };
-
-const onInput = (event) => {
-  getData(event.target.value);
-};
-search_movie_input.addEventListener("input", debounce(onInput));
+search_movie_input.addEventListener("input", debounce(onInput, 1000));
