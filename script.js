@@ -1,5 +1,9 @@
 "use strict";
+
 const search_movie_input = document.getElementById("search_movie");
+const searched_movies_container = document.querySelector(
+  ".searched_movies_container"
+);
 const getData = async (searchTerm) => {
   try {
     const response = await axios.get("http://www.omdbapi.com/", {
@@ -22,5 +26,13 @@ getData();
 const onInput = async (event) => {
   const movies = await getData(event.target.value);
   console.log(movies);
+  movies.forEach((movie) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <img class='poster' src="${movie.Poster}"/>
+    <h1 class="movie_title">${movie.Title}</h1>
+    `;
+    searched_movies_container.appendChild(div);
+  });
 };
 search_movie_input.addEventListener("input", debounce(onInput, 1000));
