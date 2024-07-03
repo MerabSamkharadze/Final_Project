@@ -82,7 +82,8 @@ document.addEventListener("click", function (e) {
 });
 
 // movie-Content
-
+const movie_section = document.getElementById("movie_section");
+movie_section.innerHTML = "";
 const onMovieSelect = async (movie) => {
   const response = await axios.get("http://www.omdbapi.com/", {
     params: {
@@ -90,5 +91,34 @@ const onMovieSelect = async (movie) => {
       i: movie.imdbID,
     },
   });
-  console.log(response.data);
+
+  const movie_root = `
+
+<div class="container">
+<div class="posterDiv">
+  <img
+    src=${response.data.Poster}
+  />
+</div>
+<div class="contentDiv">
+ 
+    <h2 class="movie_title">${response.data.Title}</h2>
+    <h2 class="imdb">IMDB: <span>${response.data.imdbRating}</span></h2>
+
+  <div class="">
+    <p>გამოშვების წელი: <span>${response.data.Year}</span></p>
+    <p>ქვეყანა: <span>${response.data.Country}</span></p>
+    <p>ჟანრი: <span>${response.data.Genre}</span></p>
+    <p>რეჟისორი: <span>${response.data.Director}</span></p>
+    <p>როლებში: <span>${response.data.Actors}</span></p>
+    <p>
+      აღწერა:
+      <span
+        >${response.data.Plot} </span
+      >
+    </p>
+  </div>
+</div>
+</div>`;
+  movie_section.innerHTML = movie_root;
 };

@@ -1,5 +1,5 @@
 body {
-  height: 400vh;
+  background-color: rgb(20, 20, 20);
 }
 
 .movie_title {
@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 #logo {
@@ -60,4 +61,53 @@ header {
 .dropdown-item img {
   width: 35px;
   margin-right: 10px;
+}
+
+/* movie_content */
+
+section {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+  padding-bottom: 60px;
+}
+.posterDiv img {
+  margin: 80px 40px;
+  width: 400px;
+}
+.contentDiv {
+  width: 70%;
+}
+.headings {
+  width: 500px;
+}
+.movie_title {
+  margin-top: 60px;
+  font-size: 60px;
+  color: brown;
+  border-bottom: 1px solid black;
+}
+.imdb {
+  margin-top: 50px;
+  font-size: 30px;
+  color: rgb(152, 26, 7);
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+.contentDiv p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(152, 26, 7);
+}
+.contentDiv span {
+  color: black;
+
+  margin-left: 20px;
 }
