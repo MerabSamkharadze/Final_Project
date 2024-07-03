@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/page_icon.svg" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Final Project</title>
+    <title>Favorite Movies</title>
   </head>
   <body>
     <header>
       <h1 id="logo">F🎥Movies</h1>
-
-      <input
-        type="text"
-        name="search_movie"
-        id="search_movie"
-        placeholder="Search Movie"
-      />
+      <div class="autocomplete"></div>
     </header>
 
-    <div class="searched_movies_container"></div>
+    <!-- <div class="searched_movies_container"></div> -->
     <script src="node_modules/axios/dist/axios.min.js"></script>
     <script type="module" src="script.js"></script>
   </body>

@@ -1,10 +1,6 @@
 "use strict";
 import { debounce } from "./utils.js";
 
-const search_movie_input = document.getElementById("search_movie");
-const searched_movies_container = document.querySelector(
-  ".searched_movies_container"
-);
 const getData = async (searchTerm) => {
   try {
     const response = await axios.get("http://www.omdbapi.com/", {
@@ -13,7 +9,7 @@ const getData = async (searchTerm) => {
         s: searchTerm,
       },
     });
-    console.log(response.data.Search);
+
     if (response.data.Error) {
       return [];
     }
@@ -25,17 +21,39 @@ const getData = async (searchTerm) => {
     document.body.appendChild(h1);
   }
 };
+// search
+const root = document.querySelector(".autocomplete");
+root.innerHTML = `
+      <input
+        type="text"
+        id="search_movie"
+        placeholder="Search Movie"
+      />
+      <div class="dropdown">
+        <div class="dropdown-menu">
+           <div class="dropdown-content results"></div>
+       </div>
+       </div>
+
+`;
+const input = document.querySelector("#search_movie");
+const dropdown = document.querySelector(".dropdown");
+const resultsWrapper = document.querySelector(".results");
 
 const onInput = async (event) => {
+  resultsWrapper.innerHTML = "";
   const movies = await getData(event.target.value);
-  console.log(movies);
+
+  dropdown.classList.add("is-active");
   movies.forEach((movie) => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-    <img class='poster' src="${movie.Poster}"/>
-    <h1 class="movie_title">${movie.Title}</h1>
-    `;
-    searched_movies_container.appendChild(div);
+    const option = document.createElement("a");
+    const imgSrc = movie.Poster === "N/A" ? " " : movie.Poster;
+    option.classList.add("dropdown-item");
+    option.innerHTML = `
+    <img src="${imgSrc}" />
+    ${movie.Title}
+  `;
+    resultsWrapper.appendChild(option);
   });
 };
-search_movie_input.addEventListener("input", debounce(onInput, 1000));
+input.addEventListener("input", debounce(onInput, 500));
