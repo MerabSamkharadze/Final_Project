@@ -102,7 +102,7 @@ const onMovieSelect = async (movie) => {
 </div>
 <div class="contentDiv">
  
-    <h2 class="movie_title">${response.data.Title}</h2>
+    <h2 class="content_movie_title">${response.data.Title}</h2>
     <h2 class="imdb">IMDB: <span>${response.data.imdbRating}</span></h2>
 
   <div class="">
