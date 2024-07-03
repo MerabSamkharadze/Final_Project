@@ -71,3 +71,10 @@ logo.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+document.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (!root.contains(e.target)) {
+    dropdown.classList.remove("is-active");
+  }
+});
