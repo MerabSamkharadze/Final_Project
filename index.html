@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/page_icon.svg" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Final Project</title>
   </head>
   <body>
-    <input
-      type="text"
-      name="search_movie"
-      id="search_movie"
-      placeholder="Search Movie"
-    />
+    <header>
+      <h1 id="logo">F🎥Movies</h1>
+
+      <input
+        type="text"
+        name="search_movie"
+        id="search_movie"
+        placeholder="Search Movie"
+      />
+    </header>
 
     <div class="searched_movies_container"></div>
     <script src="node_modules/axios/dist/axios.min.js"></script>
-    <!-- <script src="utils.js"></script> -->
     <script type="module" src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+body {
+  height: 400vh;
+}
+
+.movie_title {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+#logo {
+  font-size: 35px;
+  color: brown;
+  left: 40px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+#search_movie {
+  width: 60%;
+  height: 40px;
+  margin-right: 40px;
+  font-size: 20px;
+  padding-left: 20px;
+  border: 2px solid white;
+}
+
+#search_movie:focus {
+  background-color: #fff;
+}

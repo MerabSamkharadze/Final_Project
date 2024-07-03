@@ -13,9 +13,11 @@ const getData = async (searchTerm) => {
         s: searchTerm,
       },
     });
+    console.log(response.data.Search);
     if (response.data.Error) {
       return [];
     }
+
     return response.data.Search;
   } catch (err) {
     const h1 = document.createElement("h1");
@@ -23,8 +25,6 @@ const getData = async (searchTerm) => {
     document.body.appendChild(h1);
   }
 };
-
-getData();
 
 const onInput = async (event) => {
   const movies = await getData(event.target.value);
