@@ -1,6 +1,6 @@
 "use strict";
 
-const debounce = (func, delay) => {
+export const debounce = (func, delay) => {
   let timeOutId;
   return (...args) => {
     if (timeOutId) {

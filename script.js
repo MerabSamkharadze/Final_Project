@@ -1,4 +1,5 @@
 "use strict";
+import { debounce } from "./utils.js";
 
 const search_movie_input = document.getElementById("search_movie");
 const searched_movies_container = document.querySelector(
@@ -12,7 +13,9 @@ const getData = async (searchTerm) => {
         s: searchTerm,
       },
     });
-
+    if (response.data.Error) {
+      return [];
+    }
     return response.data.Search;
   } catch (err) {
     const h1 = document.createElement("h1");
