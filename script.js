@@ -63,3 +63,11 @@ const onInput = async (event) => {
   });
 };
 input.addEventListener("input", debounce(onInput, 500));
+
+const logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
