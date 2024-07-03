@@ -44,13 +44,11 @@ const onInput = async (event) => {
   resultsWrapper.innerHTML = " ";
 
   const movies = await getData(event.target.value);
-  if (event.target.value.length > 2) {
-    dropdown.classList.add("is-active");
-  } else {
-    if (dropdown.getAttribute("class").includes("is-active")) {
-      dropdown.classList.remove("is-active");
-    }
+  if (!movies.length) {
+    dropdown.classList.remove("is-active");
+    return;
   }
+  dropdown.classList.add("is-active");
   movies.forEach((movie) => {
     const option = document.createElement("a");
     const imgSrc = movie.Poster === "N/A" ? " " : movie.Poster;
