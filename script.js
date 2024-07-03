@@ -60,6 +60,7 @@ const onInput = async (event) => {
     option.addEventListener("click", () => {
       dropdown.classList.remove("is-active");
       input.value = movie.Title;
+      onMovieSelect(movie);
     });
     resultsWrapper.appendChild(option);
   });
@@ -75,8 +76,19 @@ logo.addEventListener("click", () => {
 });
 
 document.addEventListener("click", function (e) {
-  console.log(e.target);
   if (!root.contains(e.target)) {
     dropdown.classList.remove("is-active");
   }
 });
+
+// movie-Content
+
+const onMovieSelect = async (movie) => {
+  const response = await axios.get("http://www.omdbapi.com/", {
+    params: {
+      apikey: "2386a7bd",
+      i: movie.imdbID,
+    },
+  });
+  console.log(response.data);
+};
