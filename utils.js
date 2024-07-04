@@ -75,6 +75,18 @@ export const onMovieSelect = async (movie) => {
 </div>
 </div>`;
   movie_section.innerHTML = movie_root;
+
+  //home logo click event
+
+  const logo = document.getElementById("logo");
+  logo.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    input.value = "";
+    movie_section.innerHTML = "";
+  });
 };
 
 // search
