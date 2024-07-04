@@ -75,6 +75,7 @@ section {
   justify-content: space-between;
   background-color: blanchedalmond;
   padding-bottom: 60px;
+  border-bottom: 20px solid black;
 }
 .posterDiv img {
   margin: 80px 40px;
