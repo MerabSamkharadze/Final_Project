@@ -76,6 +76,13 @@ export const onMovieSelect = async (movie) => {
 </div>`;
   movie_section.innerHTML = movie_root;
 
+  //overlay click
+  document.addEventListener("click", function (e) {
+    if (!root.contains(e.target)) {
+      dropdown.classList.remove("is-active");
+    }
+  });
+
   //home logo click event
 
   const logo = document.getElementById("logo");

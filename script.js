@@ -1,29 +1,25 @@
 "use strict";
-import { debounce, onInput, getData } from "./utils.js";
+import { debounce, onInput, getData, onMovieSelect } from "./utils.js";
 
 const input = document.querySelector("#search_movie");
 input.addEventListener("input", debounce(onInput, 500));
 
-const logo = document.getElementById("logo");
-logo.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-  input.value = "";
-  onInput(input.value);
-});
+// const logo = document.getElementById("logo");
+// logo.addEventListener("click", () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+//   input.value = "";
+//   onInput(input.value);
+// });
 
-document.addEventListener("click", function (e) {
-  if (!root.contains(e.target)) {
-    dropdown.classList.remove("is-active");
-  }
-});
+// render films on home page
+
 const movie_colection = document.querySelector(".movie_colection");
 const movie_colections = await getData("Spider-man");
 const fragment = new DocumentFragment();
 movie_colections.forEach((element) => {
-  console.log(element);
   const movieDiv = document.createElement("div");
   movieDiv.classList.add("movie");
   const img = document.createElement("img");
@@ -33,5 +29,10 @@ movie_colections.forEach((element) => {
   movieDiv.appendChild(img);
   movieDiv.appendChild(title);
   fragment.appendChild(movieDiv);
+
+  //onMovieSelect
+  movieDiv.addEventListener("click", function () {
+    onMovieSelect(element);
+  });
 });
 movie_colection.appendChild(fragment);
