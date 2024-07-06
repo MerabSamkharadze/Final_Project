@@ -78,11 +78,13 @@ section {
   border-bottom: 20px solid black;
 }
 .posterDiv img {
-  margin: 80px 40px;
+  margin-top: 80px;
   width: 400px;
 }
 .contentDiv {
-  width: 70%;
+  width: 80%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .headings {
   width: 500px;
