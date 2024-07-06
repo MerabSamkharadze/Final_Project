@@ -4,15 +4,15 @@ import { debounce, onInput, getData, onMovieSelect } from "./utils.js";
 const input = document.querySelector("#search_movie");
 input.addEventListener("input", debounce(onInput, 500));
 
-// const logo = document.getElementById("logo");
-// logo.addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-//   input.value = "";
-//   onInput(input.value);
-// });
+const logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  input.value = "";
+  onInput(input.value);
+});
 
 // render films on home page
 
@@ -33,6 +33,10 @@ movie_colections.forEach((element) => {
   //onMovieSelect
   movieDiv.addEventListener("click", function () {
     onMovieSelect(element);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 });
 movie_colection.appendChild(fragment);

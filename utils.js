@@ -86,7 +86,8 @@ export const onMovieSelect = async (movie) => {
   //home logo click event
 
   const logo = document.getElementById("logo");
-  logo.addEventListener("click", () => {
+  logo.addEventListener("click", function (e) {
+    e.stopPropagation();
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -117,7 +118,6 @@ const resultsWrapper = document.querySelector(".results");
 
 export const onInput = async (event) => {
   resultsWrapper.innerHTML = " ";
-
   const movies = await getData(event.target.value);
   if (!movies.length) {
     dropdown.classList.remove("is-active");
