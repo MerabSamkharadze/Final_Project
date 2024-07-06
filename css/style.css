@@ -120,15 +120,29 @@ section {
   width: 100%;
   height: 100vh;
 }
-section h1 {
+/* section h1 {
   color: brown;
   font-size: 40px;
   padding-left: 30px;
   border-bottom: 5px solid brown;
-}
+} */
 
 .movie_colection {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.movie_colection h1 {
+  font-size: 40px;
+  color: brown;
+}
+
+.movie {
+  width: 300px;
+  height: 700px;
+}
+.movie img {
+  height: 500px;
 }
