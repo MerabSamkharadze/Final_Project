@@ -40,3 +40,7 @@ movie_colections.forEach((element) => {
   });
 });
 movie_colection.appendChild(fragment);
+
+// movies you might like
+
+const slider = document.querySelector(".slider");
