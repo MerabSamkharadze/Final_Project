@@ -28,7 +28,7 @@ header {
   margin-left: 40px;
   cursor: pointer;
 }
-#logIn {
+#logIn a {
   font-size: 20px;
   color: brown;
   cursor: pointer;
