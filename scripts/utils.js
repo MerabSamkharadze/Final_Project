@@ -91,6 +91,7 @@ export const onMovieSelect = async (movie) => {
       top: 0,
       behavior: "smooth",
     });
+    input.value ? (input.value = "") : input.value;
     movie_section.innerHTML = "";
   });
 };
