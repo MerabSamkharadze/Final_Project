@@ -15,9 +15,21 @@ logo.addEventListener("click", () => {
 });
 
 // render films on home page
-
+const moviesArray = [
+  "avengers",
+  "spider-man",
+  "future",
+  "love",
+  "sea",
+  "turtle",
+  "pirates",
+  "christmas",
+];
+let ind = Math.floor(Math.random() * moviesArray.length);
+console.log(ind);
+let movie = moviesArray[ind];
 const movie_colection = document.querySelector(".movie_colection");
-const movie_colections = await getData("Spider-man");
+const movie_colections = await getData(movie);
 const fragment = new DocumentFragment();
 movie_colections.forEach((element) => {
   const movieDiv = document.createElement("div");
