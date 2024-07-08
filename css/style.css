@@ -1,3 +1,6 @@
+/* cookies */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* cookies */
 body {
   background-color: rgb(20, 20, 20);
 }
@@ -149,3 +152,67 @@ section {
 .movie img {
   height: 500px;
 }
+
+/* cookies */
+
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.container_cookies {
+  width: 1600px;
+  height: auto;
+}
+.subContainer {
+  width: 85%;
+  margin: auto;
+}
+#cookies {
+  width: 100%;
+  position: fixed;
+  bottom: 150px;
+  color: #fff;
+  background-color: rgba(16, 49, 120, 0.582);
+  z-index: 1;
+  display: none;
+}
+.cookies {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#cookies_btn {
+  border-radius: 5px;
+  border: 3px solid #fff;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+#cookies_btn:hover {
+  background-color: #fff;
+  border: 3px solid black;
+  color: black;
+}
+.cookies a {
+  color: yellow;
+  font-weight: 500;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cookies {
+    padding: 10px 0;
+  }
+}
+/* cookies */

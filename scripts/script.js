@@ -10,8 +10,6 @@ logo.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
-  input.value = "";
-  onInput(input.value);
 });
 
 // render films on home page
@@ -26,7 +24,6 @@ const moviesArray = [
   "christmas",
 ];
 let ind = Math.floor(Math.random() * moviesArray.length);
-console.log(ind);
 let movie = moviesArray[ind];
 const movie_colection = document.querySelector(".movie_colection");
 const movie_colections = await getData(movie);
@@ -56,7 +53,3 @@ movie_colection.appendChild(fragment);
 // movies you might like
 
 const slider = document.querySelector(".slider");
-
-// registration
-
-const login = document.getElementById("logIn");

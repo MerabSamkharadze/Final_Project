@@ -87,12 +87,10 @@ export const onMovieSelect = async (movie) => {
 
   const logo = document.getElementById("logo");
   logo.addEventListener("click", function (e) {
-    e.stopPropagation();
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-    input.value = "";
     movie_section.innerHTML = "";
   });
 };
