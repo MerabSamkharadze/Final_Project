@@ -136,6 +136,10 @@ export const onInput = async (event) => {
       dropdown.classList.remove("is-active");
       input.value = movie.Title;
       onMovieSelect(movie);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
     resultsWrapper.appendChild(option);
   });
