@@ -22,6 +22,16 @@ const moviesArray = [
   "turtle",
   "pirates",
   "christmas",
+  "father",
+  "mom",
+  "sister",
+  "girl",
+  "road",
+  "forest",
+  "friend",
+  "ball",
+  "trees",
+  "science",
 ];
 let ind = Math.floor(Math.random() * moviesArray.length);
 let movie = moviesArray[ind];
