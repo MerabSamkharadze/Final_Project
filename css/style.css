@@ -156,7 +156,6 @@ section {
 }
 
 /* cookies */
-
 .container_cookies {
   width: 1600px;
   height: auto;
@@ -166,11 +165,12 @@ section {
   margin: auto;
 }
 #cookies {
+  min-height: 100px;
   width: 100%;
   position: fixed;
-  bottom: 150px;
+  bottom: 100px;
   color: #fff;
-  background-color: rgba(16, 49, 120, 0.582);
+  background-color: rgba(16, 49, 120, 0.838);
   z-index: 1;
   display: none;
 }
@@ -178,9 +178,9 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
   flex-wrap: wrap;
   gap: 10px;
-  color: brown;
 }
 #cookies_btn {
   border-radius: 5px;
@@ -198,7 +198,7 @@ section {
   color: black;
 }
 .cookies a {
-  color: rgb(238, 104, 9);
+  color: yellow;
   font-weight: 500;
 }
 
