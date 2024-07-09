@@ -17,17 +17,10 @@
     <title>Favorite Movies</title>
   </head>
   <body>
-    <header>
-      <h1 id="logo">F🎥Movies</h1>
-      <div class="autocomplete"></div>
-      <h1 id="logIn">
-        <a href="./login/login.html" target="_blank">Registration</a>
-      </h1>
-    </header>
     <!-- cookies -->
 
     <div id="cookies">
-      <div class="container_cookies">
+      <div class="container">
         <div class="subContainer">
           <div class="cookies">
             <p>
@@ -44,12 +37,21 @@
       </div>
     </div>
     <!-- cookies -->
+    <header>
+      <h1 id="logo">F🎥Movies</h1>
+      <div class="autocomplete"></div>
+      <h1 id="logIn">
+        <a href="./login/login.html" target="_blank">Registration</a>
+      </h1>
+    </header>
+
     <section id="movie_section"></section>
     <section class="movie_colection"></section>
     <section class="movie_offers">
       <h1>Movies you might like</h1>
       <div class="slider"></div>
     </section>
+    <script src="./scripts/cookies.js"></script>
     <script src="node_modules/axios/dist/axios.min.js"></script>
     <script type="module" src="./scripts/script.js"></script>
   </body>

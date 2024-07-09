@@ -3,6 +3,8 @@
 /* cookies */
 body {
   background-color: rgb(20, 20, 20);
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .movie_title {
@@ -155,10 +157,6 @@ section {
 
 /* cookies */
 
-body {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-}
 .container_cookies {
   width: 1600px;
   height: auto;
@@ -177,12 +175,12 @@ body {
   display: none;
 }
 .cookies {
-  min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  color: brown;
 }
 #cookies_btn {
   border-radius: 5px;
@@ -200,7 +198,7 @@ body {
   color: black;
 }
 .cookies a {
-  color: yellow;
+  color: rgb(238, 104, 9);
   font-weight: 500;
 }
 
@@ -215,4 +213,5 @@ body {
     padding: 10px 0;
   }
 }
+
 /* cookies */
