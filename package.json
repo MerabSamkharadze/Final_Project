@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "axios": "^1.7.2"
   }
 }
