@@ -33,6 +33,7 @@ const moviesArray = [
   "trees",
   "science",
   "zombie",
+  "list",
 ];
 let ind = Math.floor(Math.random() * moviesArray.length);
 let movie = moviesArray[ind];
