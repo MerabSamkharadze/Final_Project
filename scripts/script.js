@@ -62,6 +62,38 @@ movie_colections.forEach((element) => {
 });
 movie_colection.appendChild(fragment);
 
-// movies you might like
+// //splide
+// let ind_slider = Math.floor(Math.random() * moviesArray.length);
+// let movie_slider = moviesArray[ind_slider];
+// const splide__list = document.querySelector(".splide__list");
 
-const slider = document.querySelector(".slider");
+// document.addEventListener("DOMContentLoaded", function () {
+//   async function getlis() {
+//     const movies_for_slider = await getData(movie_slider);
+//     movies_for_slider.forEach((movie) => {
+//       let li = document.createElement("li");
+//       li.classList.add("splide__slide");
+//       const splideInnerHTML = `
+
+//                   <div class="img_box">
+//                     <img
+//                       src=${movie.Poster}
+//                       alt="img"
+//                     />
+//                   </div>
+//                   <h1>${movie.Title}</h1>
+
+//       `;
+//       li.innerHTML = splideInnerHTML;
+
+//       splide__list.appendChild(li);
+//     });
+//   }
+//   getlis();
+// });
+// var splide = new Splide(".splide", {
+//   type: "fade",
+//   rewind: true,
+// });
+
+// splide.mount();

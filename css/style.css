@@ -1,7 +1,6 @@
 /* cookies */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* cookies */
-@import "@splidejs/splide/css";
 
 body {
   background-color: rgb(20, 20, 20);
@@ -217,3 +216,25 @@ section {
 }
 
 /* cookies */
+
+/* splide */
+.movie_slider {
+  height: 110vh;
+  background-color: rgb(10, 0, 0);
+  position: relative;
+}
+.img_box {
+  width: 300px;
+}
+.splide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 600px;
+}
+.splide__slide h1 {
+  font-size: 40px;
+  color: brown;
+}
